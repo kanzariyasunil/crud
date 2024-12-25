@@ -9,8 +9,8 @@ load_dotenv()
 def get_connection():
     conn_params = {
         "dbname": "postgres",
-        "user": "postgres.fegkvxlmakzxfjhuthxf",
-        "password": "lMUSUZZH96jSESZ9",
+        "user": "postgres.zleiplxecgllndvtfeln",
+        "password": "0vNtq1jP2rjzHZuz",
         "host": "aws-0-ap-south-1.pooler.supabase.com",
         "port": 6543,
         "sslmode": "require"
