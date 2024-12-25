@@ -7,11 +7,11 @@ import os
 # Function to create a connection and cursor
 def get_connection():
     try:
-        conn = psycopg2.connect(database =os.getenv("DB_NAME"),    
-                                 user=os.getenv("DB_USER"),
-                                 password=os.getenv("DB_PASS"),
-                                 host=os.getenv("DB_HOST"),
-                                 port=os.getenv("DB_PORT")
+        conn = psycopg2.connect(database =os.getenv("DB__NAME"),    
+                                 user=os.getenv("DB__USER"),
+                                 password=os.getenv("DB__PASS"),
+                                 host=os.getenv("DB__HOST"),
+                                 port=os.getenv("DB__PORT")
                                  )
         return conn
     except Exception as e:
