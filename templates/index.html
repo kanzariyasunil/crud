@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Developer Portfolio</title>
+    <style>
+        /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Main Layout */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Section Styles */
+section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* About Section */
+#about p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #555;
+}
+
+/* Skills Section */
+#skills ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+#skills li {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+/* Projects Section */
+#projects .project {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#projects h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+#projects p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+#projects a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#projects a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Section */
+#contact p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+#contact a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 1em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    section h2 {
+        font-size: 2em;
+    }
+
+    #skills ul {
+        text-align: center;
+    }
+
+    #projects .project {
+        margin-bottom: 30px;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Sunil Kanzariya</h1>
+            <p>Backend Developer</p>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I'm a passionate developer with experience in  back-end technologies. I love building scalable and user-friendly applications.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <ul>
+                
+                <li>Python (Django, Flask)</li>
+                <li>HTML, CSS, jinja2</li>
+                <li>SQL & NoSQL Databases (MySQL,Postgresql)</li>
+                <li>Git & GitHub</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            
+            <div class="project">
+                <h3>Project One: Tic Tac Tou Game</h3>
+                <p>Make a Tic Tac Tou game using Flask, html and css.</p>
+                <a href="https://flask-tic-tac-tou.vercel.app/" target="_blank">View Project</a>
+            </div>
+            <div class="project">
+                <h3>Project Two: To do List</h3>
+                <p>Make a To-do list using Flask, html and css   </p>
+                <a href="https://my-todolist-bice.vercel.app/" target="_blank">View Project</a>
+            </div>
+             <div class="project">
+                <h3>Project Three:E-commerce Web site</h3>
+                <p>Using Django,html,css make a E-commerce Web site </p>
+                <a href="https://django-e-commerce-one.vercel.app/shop/" target="_blank">View Project</a>
+            </div>
+            <div class="project">
+                <h3>Project Four:Text-utils</h3>
+                <p>Using Django,html,css make a Text-utils site. it's remove all puncuantion,extra new line and etc. in given input text. </p>
+                <a href="https://textutils-opal.vercel.app/" target="_blank">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>Email: kanzariyasunil2022004@gmail.com</p>
+            <p>GitHub: <a href="https://github.com/kanzariyasunil/" target="_blank">github.com/kanzariyasunil</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Sunil Kanzariya. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
