@@ -1,40 +1,52 @@
 import psycopg2
 from dotenv import load_dotenv
-load_dotenv()
 import os
 
+# Load environment variables
+load_dotenv()
 
-# Function to create a connection and cursor
+# Function to create a connection
 def get_connection():
+    conn_params = {
+        "dbname": "postgres",
+        "user": "postgres.fegkvxlmakzxfjhuthxf",
+        "password": "lMUSUZZH96jSESZ9",
+        "host": "aws-0-ap-south-1.pooler.supabase.com",
+        "port": 6543,
+        "sslmode": "require"
+    }
     try:
-        conn = psycopg2.connect(database =os.getenv("DB__NAME"),    
-                                 user=os.getenv("DB__USER"),
-                                 password=os.getenv("DB__PASS"),
-                                 host=os.getenv("DB__HOST"),
-                                 port=os.getenv("DB__PORT")
-                                 )
+        # Establish a connection using individual parameters
+        conn = psycopg2.connect(**conn_params)
         return conn
     except Exception as e:
-        print("Your database is not connected:", e)
+        print(f"An error occurred while connecting: {e}")
         return None
 
-# Function to make a database call (query execution)
-def make_db_call(query, returns=None, parameter=None):
+# Function to execute a query
+def make_db_call(query, returns=False, parameters=None):
     conn = get_connection()
     if conn is None:
+        print("Failed to get a database connection.")
         return None
 
     try:
-        with conn.cursor() as cur:  # Use 'with' for automatic cursor management
-            cur.execute(query, parameter)
-
+        with conn.cursor() as cur:
+            # Execute the query with parameters if provided
+            if parameters:
+                cur.execute(query, parameters)
+            else:
+                cur.execute(query)
+            
+            # If the query expects results (e.g., SELECT)
             if returns:
                 return cur.fetchall()
             else:
-                conn.commit()  # For non-SELECT queries
+                conn.commit()  # Commit for non-SELECT queries
     except Exception as e:
         conn.rollback()  # Rollback in case of error
         print("Error executing query:", e)
+        return None
     finally:
         if conn:
-            conn.close()  # Ensure connection is closed
+            conn.close() 
