@@ -38,4 +38,3 @@ def make_db_call(query, returns=None, parameter=None):
     finally:
         if conn:
             conn.close()  # Ensure connection is closed
-
